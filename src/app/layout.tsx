@@ -22,10 +22,28 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const siteUrl = "https://harrybuildz.dev";
+const siteTitle = "Harry Clemente — Mobile engineer who ships like an operator";
+const siteDescription =
+  "Mobile engineer building features end-to-end for products used millions of times a day. Most recently Android at Uber. MBA. Former co-founder.";
+
 export const metadata: Metadata = {
-  title: "Harry Clemente — Mobile engineer who ships like an operator",
-  description:
-    "Mobile engineer building features end-to-end for products used millions of times a day. Most recently Android at Uber. MBA. Former co-founder.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
+    siteName: "Harry Clemente",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.classList.toggle('dark',t==='dark');}catch(e){}})();`;
