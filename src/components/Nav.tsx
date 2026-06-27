@@ -8,6 +8,7 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
+/** Sticky top navigation: brand mark, page links, and theme toggle. */
 export default function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-rule bg-page/80 backdrop-blur-md">

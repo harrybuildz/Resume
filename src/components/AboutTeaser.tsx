@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Section, SectionHeader } from "./Section";
 import { aboutLead, expertise } from "@/lib/about";
 
+/** Home "About" section: lead paragraph and core areas of expertise. */
 export default function AboutTeaser() {
   return (
     <Section>

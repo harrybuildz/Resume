@@ -34,6 +34,7 @@ const groups = [
   },
 ];
 
+/** Home "Stack" section: capability groups rendered as chip cards. */
 export default function StackStrip() {
   return (
     <Section>

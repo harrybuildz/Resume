@@ -6,6 +6,7 @@ import StatusPill from "./StatusPill";
 // fails contrast against white button text).
 const ACCENT = "#2563EB";
 
+/** Closing contact section: a dark CTA card with availability and contact links. */
 export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-6xl px-6 py-10 md:py-16">

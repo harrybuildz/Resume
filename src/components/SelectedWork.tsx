@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Section, SectionHeader } from "./Section";
 import { cases } from "@/lib/cases";
 
+/** Home "Selected work" section: case studies as linked bento cards. */
 export default function SelectedWork() {
   return (
     <Section>

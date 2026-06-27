@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import StatusPill from "./StatusPill";
 
+/** Landing hero: identity, availability, headline, tech signature, and CTAs. */
 export default function Hero() {
   return (
     <section className="mx-auto max-w-6xl px-6 pt-20 pb-12 md:pt-28 md:pb-16">

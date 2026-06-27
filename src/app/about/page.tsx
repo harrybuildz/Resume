@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     "Product-focused Android engineer building, scaling, and optimizing high-impact mobile experiences for millions of users.",
 };
 
+/** Full About page: bio, expertise, background, education, and a contact prompt. */
 export default function AboutPage() {
   return (
     <article className="px-6 py-16 md:py-24">

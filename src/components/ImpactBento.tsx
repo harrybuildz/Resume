@@ -1,6 +1,7 @@
 import { Section, SectionHeader } from "./Section";
 import { bigStats, smallStats } from "@/lib/impact";
 
+/** Home "Impact" section: headline outcome metrics as a bento grid. */
 export default function ImpactBento() {
   return (
     <Section>

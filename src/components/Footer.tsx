@@ -1,3 +1,4 @@
+/** Site footer with copyright and domain. */
 export default function Footer() {
   return (
     <footer className="border-t border-rule px-6 py-8">
