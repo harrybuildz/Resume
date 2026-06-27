@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
-import ImpactStrip from "@/components/ImpactStrip";
+import ImpactBento from "@/components/ImpactBento";
+import StackStrip from "@/components/StackStrip";
 import SelectedWork from "@/components/SelectedWork";
 import AboutTeaser from "@/components/AboutTeaser";
 import Contact from "@/components/Contact";
@@ -8,7 +9,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ImpactStrip />
+      <ImpactBento />
+      <StackStrip />
       <SelectedWork />
       <AboutTeaser />
       <Contact />

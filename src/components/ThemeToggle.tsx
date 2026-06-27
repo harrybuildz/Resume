@@ -3,17 +3,21 @@
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
-  const [isDark, setIsDark] = useState(false);
+  const [state, setState] = useState({ mounted: false, isDark: false });
+  const { mounted, isDark } = state;
 
   useEffect(() => {
-    setIsDark(document.documentElement.classList.contains("dark"));
-    setMounted(true);
+    // One-time read of the theme set by the pre-hydration inline script.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setState({
+      mounted: true,
+      isDark: document.documentElement.classList.contains("dark"),
+    });
   }, []);
 
   function toggle() {
     const next = !isDark;
-    setIsDark(next);
+    setState({ mounted: true, isDark: next });
     document.documentElement.classList.toggle("dark", next);
     localStorage.setItem("theme", next ? "dark" : "light");
   }
@@ -21,10 +25,39 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      aria-label="Toggle color theme"
-      className="text-muted hover:text-ink transition-colors text-base w-6 h-6 flex items-center justify-center"
+      aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+      className="text-muted hover:text-ink transition-colors w-7 h-7 flex items-center justify-center"
     >
-      {mounted ? (isDark ? "☀" : "☾") : "·"}
+      {mounted && isDark ? (
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+        </svg>
+      ) : (
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+        </svg>
+      )}
     </button>
   );
 }

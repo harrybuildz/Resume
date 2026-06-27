@@ -31,4 +31,12 @@ export const cases: CaseStudy[] = [
       "Rebuilt acquisition, retention, and operations as Technical Director — 70 to 180 students, 80%+ trial conversion, eight sold-out summer camps.",
     metric: "+157% enrollment",
   },
+  {
+    slug: "safety-reliability",
+    title: "Safety features & production reliability",
+    org: "Uber · Android · 2022–2026",
+    summary:
+      "Shipped Safety Shield enhancements, in-trip video playback, and rider PIN verification; engineered state-driven workflows and expanded crash monitoring, alerting, and on-call dashboards.",
+    metric: "Reliability",
+  },
 ];

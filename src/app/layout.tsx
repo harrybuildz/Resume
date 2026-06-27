@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
   display: "swap",
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const archivo = Archivo({
+  variable: "--font-archivo",
   subsets: ["latin"],
   display: "swap",
 });
@@ -25,7 +25,7 @@ const jetbrainsMono = JetBrains_Mono({
 const siteUrl = "https://harrybuildz.dev";
 const siteTitle = "Harry Clemente — Mobile engineer who ships like an operator";
 const siteDescription =
-  "Mobile engineer building features end-to-end for products used millions of times a day. Most recently Android at Uber. MBA. Former co-founder.";
+  "Mobile engineer building features end-to-end for products used millions of times a day. Most recently Android at Uber. MBA. Former co-founder. Open to Software Engineering roles.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -38,11 +38,20 @@ export const metadata: Metadata = {
     siteName: "Harry Clemente",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Harry Clemente — mobile engineer who ships like an operator",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
+    images: ["/og.png"],
   },
 };
 
@@ -54,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      className={`${spaceGrotesk.variable} ${archivo.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
       <head>
