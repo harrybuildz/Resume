@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import StatusPill from "./StatusPill";
 
 export default function Hero() {
   return (
@@ -18,10 +19,9 @@ export default function Hero() {
         </p>
       </div>
 
-      <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1.5 text-[13px] font-medium text-emerald-700 dark:text-emerald-400 ring-1 ring-emerald-600/15 mb-6">
-        <span className="h-2 w-2 rounded-full bg-emerald-500" />
-        Open to Software Engineering roles
-      </span>
+      <div className="mb-6">
+        <StatusPill />
+      </div>
 
       <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-[3.4rem] leading-[1.08] tracking-tight text-ink max-w-4xl">
         I build mobile products end-to-end, designed through experimentation
@@ -57,7 +57,7 @@ export default function Hero() {
           href="/contact"
           className="px-2 py-3.5 text-[15px] font-medium text-muted transition-colors hover:text-accent"
         >
-          Get in touch →
+          Get in touch <span aria-hidden="true">→</span>
         </Link>
       </div>
     </section>

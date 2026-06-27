@@ -110,7 +110,7 @@ export default function AboutPage() {
             href="/contact"
             className="inline-block mt-5 text-sm text-accent hover:opacity-80 transition-opacity"
           >
-            Get in touch →
+            Get in touch <span aria-hidden="true">→</span>
           </Link>
         </div>
       </div>

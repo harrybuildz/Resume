@@ -1,15 +1,11 @@
 import Link from "next/link";
+import { Section, SectionHeader } from "./Section";
 import { aboutLead, expertise } from "@/lib/about";
 
 export default function AboutTeaser() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-10 md:py-14">
-      <p className="text-xs font-mono uppercase tracking-[0.2em] text-muted mb-2.5">
-        About
-      </p>
-      <h2 className="font-display text-2xl md:text-3xl text-ink tracking-tight mb-6">
-        Product-focused Android engineer.
-      </h2>
+    <Section>
+      <SectionHeader eyebrow="About" title="Product-focused Android engineer." />
 
       <div className="card p-8 md:p-10">
         <p className="text-lg text-ink leading-relaxed max-w-3xl">
@@ -39,9 +35,9 @@ export default function AboutTeaser() {
           href="/about"
           className="inline-block mt-8 text-sm text-muted hover:text-accent transition-colors"
         >
-          Full background →
+          Full background <span aria-hidden="true">→</span>
         </Link>
       </div>
-    </section>
+    </Section>
   );
 }

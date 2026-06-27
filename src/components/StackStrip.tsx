@@ -1,3 +1,5 @@
+import { Section, SectionHeader } from "./Section";
+
 const groups = [
   {
     title: "Languages",
@@ -34,13 +36,8 @@ const groups = [
 
 export default function StackStrip() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-10 md:py-14">
-      <p className="text-xs font-mono uppercase tracking-[0.2em] text-muted mb-2.5">
-        Stack
-      </p>
-      <h2 className="font-display text-2xl md:text-3xl text-ink tracking-tight mb-6">
-        What I work with.
-      </h2>
+    <Section>
+      <SectionHeader eyebrow="Stack" title="What I work with." />
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {groups.map((g) => (
@@ -58,6 +55,6 @@ export default function StackStrip() {
           </div>
         ))}
       </div>
-    </section>
+    </Section>
   );
 }

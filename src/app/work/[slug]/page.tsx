@@ -31,7 +31,7 @@ export default async function CaseStudyPage({ params }: Props) {
           href="/work"
           className="text-sm text-muted hover:text-accent transition-colors"
         >
-          ← All work
+          <span aria-hidden="true">←</span> All work
         </Link>
         <div className="mt-8 flex items-baseline justify-between gap-4">
           <p className="text-xs font-mono uppercase tracking-[0.18em] text-muted">
