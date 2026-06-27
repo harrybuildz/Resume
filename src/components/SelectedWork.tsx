@@ -1,44 +1,41 @@
 import Link from "next/link";
+import { Section, SectionHeader } from "./Section";
 import { cases } from "@/lib/cases";
 
+/** Home "Selected work" section: case studies as linked bento cards. */
 export default function SelectedWork() {
   return (
-    <section className="px-6 py-16 md:py-24">
-      <div className="mx-auto max-w-3xl">
-        <div className="flex items-baseline justify-between mb-10">
-          <h2 className="font-display text-2xl md:text-3xl text-ink tracking-tight">
-            Selected work
-          </h2>
+    <Section>
+      <SectionHeader
+        eyebrow="Selected work"
+        title="Things I've shipped."
+        action={{ href: "/work", label: "All projects" }}
+      />
+
+      <div className="grid gap-4 md:grid-cols-2">
+        {cases.map((c) => (
           <Link
-            href="/work"
-            className="text-sm text-muted hover:text-accent transition-colors"
+            key={c.slug}
+            href={`/work/${c.slug}`}
+            className="card card-interactive group flex flex-col p-7"
           >
-            All projects →
+            <div className="flex items-center justify-between gap-3 mb-4">
+              <p className="text-[11px] font-mono uppercase tracking-[0.14em] text-muted">
+                {c.org}
+              </p>
+              <span className="shrink-0 rounded-lg bg-accent-soft px-2.5 py-1 text-[12.5px] font-semibold text-accent-ink">
+                {c.metric}
+              </span>
+            </div>
+            <h3 className="font-display text-xl md:text-[1.45rem] text-ink leading-snug tracking-tight group-hover:text-accent transition-colors">
+              {c.title}
+            </h3>
+            <p className="mt-3 text-[15px] text-muted leading-relaxed">
+              {c.summary}
+            </p>
           </Link>
-        </div>
-        <ul className="space-y-12">
-          {cases.map((c) => (
-            <li key={c.slug}>
-              <Link href={`/work/${c.slug}`} className="group block">
-                <div className="flex items-baseline justify-between gap-4 mb-3">
-                  <p className="text-xs font-mono uppercase tracking-[0.18em] text-muted">
-                    {c.org}
-                  </p>
-                  <p className="font-mono text-sm text-accent shrink-0">
-                    {c.metric}
-                  </p>
-                </div>
-                <h3 className="font-display text-xl md:text-2xl text-ink leading-snug group-hover:text-accent transition-colors">
-                  {c.title}
-                </h3>
-                <p className="mt-3 text-base text-muted leading-relaxed">
-                  {c.summary}
-                </p>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        ))}
       </div>
-    </section>
+    </Section>
   );
 }

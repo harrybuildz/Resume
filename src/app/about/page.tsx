@@ -1,12 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Metadata } from "next";
+import { aboutLead, expertise } from "@/lib/about";
 
 export const metadata: Metadata = {
   title: "About — Harry Clemente",
   description:
-    "Career narrative, education, and background — mobile engineer, operator, U.S. Army veteran.",
+    "Product-focused Android engineer building, scaling, and optimizing high-impact mobile experiences for millions of users.",
 };
 
+/** Full About page: bio, expertise, background, education, and a contact prompt. */
 export default function AboutPage() {
   return (
     <article className="px-6 py-16 md:py-24">
@@ -22,46 +25,49 @@ export default function AboutPage() {
         <p className="text-xs font-mono uppercase tracking-[0.2em] text-muted mb-4">
           About
         </p>
-        <h1 className="font-display text-3xl md:text-4xl text-ink tracking-tight mb-12 leading-tight">
-          Builder of mobile features, operator at heart.
+        <h1 className="font-display text-3xl md:text-4xl text-ink tracking-tight mb-8 leading-tight">
+          Product-focused Android engineer.
         </h1>
-        <div className="space-y-6 text-base md:text-lg text-ink leading-relaxed">
-          <p>
-            I&apos;m a mobile engineer. Most recently I spent three and a half
-            years at Uber, building Android features for rider safety and
-            experience on a global consumer platform — owning each feature
-            end-to-end, from architecture through experimentation, staged
-            rollout, monitoring, and iteration.
+        <p className="text-base md:text-lg text-ink leading-relaxed">
+          {aboutLead}
+        </p>
+
+        <div className="mt-14">
+          <p className="text-xs font-mono uppercase tracking-[0.18em] text-muted mb-6">
+            Core areas of expertise
           </p>
-          <p>
-            Before Uber, I was Technical Director at theCoderSchool, an
-            after-school coding center for K–12 students. I grew enrollment
-            from 70 to 180 students, ran eight sold-out summer camps that
-            generated roughly $120K, managed 20 instructors, and built
-            operational systems for acquisition, retention, and curriculum
-            delivery.
-          </p>
-          <p>
-            Before that I co-founded a Brazilian jiu-jitsu gym, trained
-            autonomous-vehicle software at Cruise and Waymo, and served eight
-            years in the U.S. Army as a Multichannel Communications Operator —
-            including a deployment to Afghanistan during Operation Enduring
-            Freedom.
-          </p>
-          <p>
-            What ties it together: high-stakes systems, measurable outcomes,
-            and a habit of building both the product and the operation around
-            it.
-          </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {expertise.map((e) => (
+              <div key={e.title} className="card p-6">
+                <h2 className="font-display text-lg text-ink tracking-tight leading-snug">
+                  {e.title}
+                </h2>
+                <p className="mt-2 text-[14px] text-muted leading-relaxed">
+                  {e.body}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-16 pt-12 border-t border-rule space-y-10">
+        <div className="mt-14 pt-12 border-t border-rule space-y-10">
           <div>
             <p className="text-xs font-mono uppercase tracking-[0.18em] text-muted mb-4">
               Most recently
             </p>
             <p className="text-base text-ink">
               Software Engineer at Uber · Android · Nov 2022 – Apr 2026
+            </p>
+          </div>
+
+          <div>
+            <p className="text-xs font-mono uppercase tracking-[0.18em] text-muted mb-4">
+              Earlier
+            </p>
+            <p className="text-base text-ink leading-relaxed">
+              Technical Director at theCoderSchool · autonomous-vehicle training
+              at Cruise &amp; Waymo · co-founder · U.S. Army veteran (Operation
+              Enduring Freedom, Afghanistan).
             </p>
           </div>
 
@@ -86,10 +92,27 @@ export default function AboutPage() {
             <p className="text-base text-ink leading-relaxed">
               Kotlin, Java, JavaScript, Python · Android, mobile architecture,
               accessibility (TalkBack), push notifications, feature flags ·
-              A/B experimentation, monitoring & alerting, staged rollouts,
+              A/B experimentation, monitoring &amp; alerting, staged rollouts,
               production debugging.
             </p>
           </div>
+        </div>
+
+        <div className="mt-14 pt-12 border-t border-rule">
+          <h2 className="font-display text-2xl text-ink tracking-tight">
+            Let&apos;s connect.
+          </h2>
+          <p className="mt-3 text-base text-muted leading-relaxed">
+            Always glad to swap mobile-development stories or talk through
+            emerging trends in the Android ecosystem — whether you want to
+            collaborate, share insights, or simply talk code.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block mt-5 text-sm text-accent hover:opacity-80 transition-opacity"
+          >
+            Get in touch <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </div>
     </article>

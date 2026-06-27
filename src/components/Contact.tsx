@@ -1,26 +1,62 @@
 import { contactLinks } from "@/lib/contact";
+import StatusPill from "./StatusPill";
 
+// This card is a permanently-dark panel in both themes, so its accent is fixed
+// (not the theme `--accent` token, which lightens to #6E9BFF in dark mode and
+// fails contrast against white button text).
+const ACCENT = "#2563EB";
+
+/** Closing contact section: a dark CTA card with availability and contact links. */
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="border-t border-rule px-6 py-16 md:py-24"
-    >
-      <div className="mx-auto max-w-3xl">
-        <h2 className="font-display text-2xl md:text-3xl text-ink tracking-tight mb-8">
-          Get in touch
+    <section id="contact" className="mx-auto max-w-6xl px-6 py-10 md:py-16">
+      <div className="rounded-3xl bg-[#16161A] p-10 md:p-12">
+        <div className="mb-5">
+          <StatusPill onDark />
+        </div>
+
+        <h2 className="font-display text-3xl md:text-4xl text-zinc-50 tracking-tight leading-tight max-w-2xl">
+          Let&apos;s build something worth shipping.
         </h2>
-        <ul className="space-y-3 text-base md:text-lg">
+        <p className="mt-4 text-base md:text-lg text-zinc-400 leading-relaxed">
+          San Francisco Bay Area · open to on-site, hybrid, or remote.
+        </p>
+
+        <div className="mt-7 flex flex-wrap items-center gap-3">
+          <a
+            href="mailto:harry.s.clemente@gmail.com"
+            style={{ backgroundColor: ACCENT }}
+            className="rounded-xl px-5 py-3.5 text-[15px] font-semibold text-white transition-opacity hover:opacity-90"
+          >
+            Email me
+          </a>
+          <a
+            href="https://www.linkedin.com/in/harryclemente/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-xl px-5 py-3.5 text-[15px] font-semibold text-zinc-100 ring-1 ring-white/15 transition-colors hover:ring-white/30"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="/resume.pdf"
+            className="rounded-xl px-5 py-3.5 text-[15px] font-semibold text-zinc-100 ring-1 ring-white/15 transition-colors hover:ring-white/30"
+          >
+            Download résumé
+          </a>
+        </div>
+
+        <ul className="mt-9 flex flex-wrap gap-x-8 gap-y-2 border-t border-white/10 pt-6 text-sm">
           {contactLinks.map((l) => (
-            <li key={l.label} className="flex items-baseline gap-6">
-              <span className="font-mono text-xs uppercase tracking-[0.18em] text-muted w-20 shrink-0">
+            <li key={l.label} className="flex items-baseline gap-2">
+              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-zinc-400">
                 {l.label}
               </span>
               <a
                 href={l.href}
                 target={l.external ? "_blank" : undefined}
                 rel={l.external ? "noopener noreferrer" : undefined}
-                className="text-ink hover:text-accent transition-colors"
+                className="text-zinc-200 transition-colors hover:text-[#8FB4FF]"
               >
                 {l.value}
               </a>

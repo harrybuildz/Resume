@@ -5,10 +5,12 @@ import { cases } from "@/lib/cases";
 
 type Props = { params: Promise<{ slug: string }> };
 
+/** Pre-render a static route for every case study slug. */
 export async function generateStaticParams() {
   return cases.map((c) => ({ slug: c.slug }));
 }
 
+/** Per-case page metadata (title/description) from the matched case study. */
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const c = cases.find((x) => x.slug === slug);
@@ -19,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+/** Individual case-study page; 404s on an unknown slug. */
 export default async function CaseStudyPage({ params }: Props) {
   const { slug } = await params;
   const c = cases.find((x) => x.slug === slug);
@@ -31,7 +34,7 @@ export default async function CaseStudyPage({ params }: Props) {
           href="/work"
           className="text-sm text-muted hover:text-accent transition-colors"
         >
-          ← All work
+          <span aria-hidden="true">←</span> All work
         </Link>
         <div className="mt-8 flex items-baseline justify-between gap-4">
           <p className="text-xs font-mono uppercase tracking-[0.18em] text-muted">
