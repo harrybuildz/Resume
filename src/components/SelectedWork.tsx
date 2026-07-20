@@ -9,7 +9,7 @@ export default function SelectedWork() {
       <SectionHeader
         eyebrow="Selected work"
         title="Things I've shipped."
-        action={{ href: "/work", label: "All projects" }}
+        action={{ href: "/work", label: "All work" }}
       />
 
       <div className="grid gap-4 md:grid-cols-2">

@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import ImpactBento from "@/components/ImpactBento";
 import StackStrip from "@/components/StackStrip";
 import SelectedWork from "@/components/SelectedWork";
+import ProjectsShowcase from "@/components/ProjectsShowcase";
 import AboutTeaser from "@/components/AboutTeaser";
 import Contact from "@/components/Contact";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <ImpactBento />
       <StackStrip />
       <SelectedWork />
+      <ProjectsShowcase />
       <AboutTeaser />
       <Contact />
     </>
