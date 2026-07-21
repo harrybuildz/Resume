@@ -213,9 +213,12 @@ export const projects: Project[] = [
     ],
     accent: "#D97706",
     hero: {
-      src: "/projects/sitewright/hero.jpg",
-      alt: "Sitewright demo build — Osteria Lume restaurant homepage",
+      src: "/projects/sitewright/lockup-mark.png",
+      alt: "Sitewright Studio logo — an amber carpenter's square cradling a browser window",
     },
+    heroContain: true,
+    heroBg:
+      "linear-gradient(135deg, #FAF5F2 0%, #FDF3E7 55%, #FCE9D2 100%)",
     galleryLabel: "Selected demo builds",
     gallery: [
       {
