@@ -19,18 +19,21 @@ export default function SelectedWork() {
             href={`/work/${c.slug}`}
             className="card card-interactive group flex flex-col p-7"
           >
-            <div className="flex items-center justify-between gap-3 mb-4">
+            <div className="flex items-baseline justify-between gap-3">
               <p className="text-[11px] font-mono uppercase tracking-[0.14em] text-muted">
                 {c.org}
               </p>
-              <span className="shrink-0 rounded-lg bg-accent-soft px-2.5 py-1 text-[12.5px] font-semibold text-accent-ink">
-                {c.metric}
-              </span>
             </div>
-            <h3 className="font-display text-xl md:text-[1.45rem] text-ink leading-snug tracking-tight group-hover:text-accent transition-colors">
+            <p className="mt-4 font-display font-bold text-3xl md:text-[2.1rem] text-accent-ink tracking-tight leading-none">
+              {c.metric}
+            </p>
+            <p className="mt-1.5 text-[13px] text-muted leading-snug">
+              {c.metricLabel}
+            </p>
+            <h3 className="mt-5 font-display text-xl md:text-[1.35rem] text-ink leading-snug tracking-tight group-hover:text-accent transition-colors">
               {c.title}
             </h3>
-            <p className="mt-3 text-[15px] text-muted leading-relaxed">
+            <p className="mt-2 text-[15px] text-muted leading-relaxed">
               {c.summary}
             </p>
           </Link>

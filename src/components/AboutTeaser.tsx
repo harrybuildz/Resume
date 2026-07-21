@@ -6,7 +6,7 @@ import { aboutLead, expertise } from "@/lib/about";
 export default function AboutTeaser() {
   return (
     <Section>
-      <SectionHeader eyebrow="About" title="Product-focused Android engineer." />
+      <SectionHeader eyebrow="About" title="Engineer with an operator's instincts." />
 
       <div className="card p-8 md:p-10">
         <p className="text-lg text-ink leading-relaxed max-w-3xl">

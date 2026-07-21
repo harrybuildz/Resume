@@ -3,31 +3,34 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --bg: #F5F5F7;
+  --bg: #F6F6F8;
   --surface: #FFFFFF;
-  --ink: #1D1D1F;
-  --muted: #6B6B73;
+  --ink: #17171A;
+  --muted: #64646E;
   --rule: rgba(17, 17, 17, 0.08);
-  --accent: #2563EB;
-  --accent-soft: #EAF0FE;
-  --accent-ink: #2563EB;
-  --chip: #F1F1F4;
-  --shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.08);
+  /* Signature: indigo/iris primary + a warm spark used only in the brand mark. */
+  --accent: #4F46E5;
+  --accent-soft: #ECEBFE;
+  --accent-ink: #4338CA;
+  --spark: #FB7A34;
+  --chip: #F0F0F4;
+  --shadow: 0 4px 16px rgba(23, 23, 40, 0.06);
+  --shadow-hover: 0 12px 32px rgba(23, 23, 60, 0.10);
 }
 
 .dark {
-  --bg: #0E0E10;
-  --surface: #18181C;
-  --ink: #F5F5F0;
-  --muted: #8B8B92;
+  --bg: #0C0C0F;
+  --surface: #16161B;
+  --ink: #F4F4F0;
+  --muted: #8B8B95;
   --rule: rgba(245, 245, 240, 0.10);
-  --accent: #6E9BFF;
-  --accent-soft: rgba(110, 155, 255, 0.14);
-  --accent-ink: #8FB4FF;
-  --chip: #232329;
+  --accent: #8B90FF;
+  --accent-soft: rgba(139, 144, 255, 0.15);
+  --accent-ink: #AEB2FF;
+  --spark: #FF954D;
+  --chip: #212127;
   --shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
-  --shadow-hover: 0 12px 34px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 14px 36px rgba(0, 0, 0, 0.55);
 }
 
 @theme inline {
@@ -39,6 +42,7 @@
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --color-accent-ink: var(--accent-ink);
+  --color-spark: var(--spark);
   --color-chip: var(--chip);
 
   --font-display: var(--font-space-grotesk);

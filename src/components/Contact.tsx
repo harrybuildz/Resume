@@ -2,9 +2,9 @@ import { contactLinks } from "@/lib/contact";
 import StatusPill from "./StatusPill";
 
 // This card is a permanently-dark panel in both themes, so its accent is fixed
-// (not the theme `--accent` token, which lightens to #6E9BFF in dark mode and
-// fails contrast against white button text).
-const ACCENT = "#2563EB";
+// (not the theme `--accent` token, which lightens in dark mode and would fail
+// contrast against white button text). Kept in sync with the light `--accent`.
+const ACCENT = "#4F46E5";
 
 /** Closing contact section: a dark CTA card with availability and contact links. */
 export default function Contact() {
@@ -56,7 +56,7 @@ export default function Contact() {
                 href={l.href}
                 target={l.external ? "_blank" : undefined}
                 rel={l.external ? "noopener noreferrer" : undefined}
-                className="text-zinc-200 transition-colors hover:text-[#8FB4FF]"
+                className="text-zinc-200 transition-colors hover:text-[#AEB2FF]"
               >
                 {l.value}
               </a>

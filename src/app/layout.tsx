@@ -23,9 +23,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 const siteUrl = "https://harrybuildz.dev";
-const siteTitle = "Harry Clemente — Mobile engineer who ships like an operator";
+const siteTitle = "Harry Clemente — Product engineer who ships end-to-end";
 const siteDescription =
-  "Mobile engineer building features end-to-end for products used millions of times a day. Most recently Android at Uber. MBA. Former co-founder. Open to Software Engineering roles.";
+  "Product-focused engineer building features end-to-end — architecture to A/B test to production. Most recently Android at Uber, for millions of riders a day. MBA. Open to Software Engineering roles.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Harry Clemente — mobile engineer who ships like an operator",
+        alt: "Harry Clemente — product engineer who ships end-to-end",
       },
     ],
   },

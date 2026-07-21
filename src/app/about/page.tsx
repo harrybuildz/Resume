@@ -6,33 +6,49 @@ import { aboutLead, expertise } from "@/lib/about";
 export const metadata: Metadata = {
   title: "About — Harry Clemente",
   description:
-    "Product-focused Android engineer building, scaling, and optimizing high-impact mobile experiences for millions of users.",
+    "Product-focused engineer building, scaling, and shipping high-impact products end-to-end — from architecture to A/B test to production.",
 };
 
 /** Full About page: bio, expertise, background, education, and a contact prompt. */
 export default function AboutPage() {
   return (
     <article className="px-6 py-16 md:py-24">
-      <div className="mx-auto max-w-2xl">
-        <Image
-          src="/professional_portrait.png"
-          alt="Portrait of Harry Clemente"
-          width={288}
-          height={288}
-          priority
-          className="rounded-lg mb-10 object-cover"
-        />
-        <p className="text-xs font-mono uppercase tracking-[0.2em] text-muted mb-4">
-          About
-        </p>
-        <h1 className="font-display text-3xl md:text-4xl text-ink tracking-tight mb-8 leading-tight">
-          Product-focused Android engineer.
-        </h1>
-        <p className="text-base md:text-lg text-ink leading-relaxed">
-          {aboutLead}
-        </p>
+      <div className="mx-auto max-w-4xl">
+        {/* Intro — text + portrait, balanced */}
+        <div className="grid items-center gap-10 md:grid-cols-[1.4fr_1fr]">
+          <div>
+            <p className="text-xs font-mono uppercase tracking-[0.2em] text-muted mb-4">
+              About
+            </p>
+            <h1 className="font-display text-3xl md:text-4xl text-ink tracking-tight leading-tight">
+              I build products end-to-end.
+            </h1>
+            <p className="mt-6 text-base md:text-lg text-ink leading-relaxed">
+              {aboutLead}
+            </p>
+          </div>
+          <div className="relative mx-auto w-full max-w-[16rem]">
+            <div
+              aria-hidden="true"
+              className="absolute -inset-4 -z-10 rounded-3xl opacity-70 blur-2xl"
+              style={{
+                background:
+                  "radial-gradient(60% 60% at 60% 25%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%)",
+              }}
+            />
+            <Image
+              src="/professional_portrait.png"
+              alt="Portrait of Harry Clemente"
+              width={288}
+              height={360}
+              priority
+              className="aspect-[4/5] w-full rounded-3xl border border-rule object-cover shadow-[var(--shadow-hover)]"
+            />
+          </div>
+        </div>
 
-        <div className="mt-14">
+        {/* Expertise */}
+        <div className="mt-16">
           <p className="text-xs font-mono uppercase tracking-[0.18em] text-muted mb-6">
             Core areas of expertise
           </p>
@@ -50,7 +66,8 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="mt-14 pt-12 border-t border-rule space-y-10">
+        {/* Background */}
+        <div className="mt-16 grid gap-x-12 gap-y-10 border-t border-rule pt-12 sm:grid-cols-2">
           <div>
             <p className="text-xs font-mono uppercase tracking-[0.18em] text-muted mb-4">
               Most recently
@@ -98,18 +115,19 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="mt-14 pt-12 border-t border-rule">
+        {/* Connect */}
+        <div className="mt-16 pt-12 border-t border-rule">
           <h2 className="font-display text-2xl text-ink tracking-tight">
             Let&apos;s connect.
           </h2>
-          <p className="mt-3 text-base text-muted leading-relaxed">
-            Always glad to swap mobile-development stories or talk through
-            emerging trends in the Android ecosystem — whether you want to
-            collaborate, share insights, or simply talk code.
+          <p className="mt-3 text-base text-muted leading-relaxed max-w-2xl">
+            Always glad to swap product and mobile-engineering stories, talk
+            through what I&apos;m building, or explore a role — whether you want
+            to collaborate, share insights, or simply talk shop.
           </p>
           <Link
             href="/contact"
-            className="inline-block mt-5 text-sm text-accent hover:opacity-80 transition-opacity"
+            className="inline-block mt-5 text-sm font-semibold text-accent hover:opacity-80 transition-opacity"
           >
             Get in touch <span aria-hidden="true">→</span>
           </Link>
