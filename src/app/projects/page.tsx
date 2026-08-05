@@ -6,7 +6,7 @@ import { projects } from "@/lib/projects";
 export const metadata: Metadata = {
   title: "Projects — Harry Clemente",
   description:
-    "Independent products built end-to-end: StockKitty (stock research), WanderFree (credit-card benefits), and Sitewright Studio (web design business).",
+    "Independent products built end-to-end: StockKitty (stock research), WanderFreely (credit-card benefits), and Sitewright Studio (web design business).",
 };
 
 export default function ProjectsIndex() {

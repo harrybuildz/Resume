@@ -78,6 +78,11 @@ export const projects: Project[] = [
     ],
     links: [
       {
+        label: "Visit site",
+        href: "https://stockkitty.net",
+        external: true,
+      },
+      {
         label: "GitHub",
         href: "https://github.com/harrybuildz/stockkitty",
         external: true,
@@ -111,7 +116,7 @@ export const projects: Project[] = [
   },
   {
     slug: "wanderfree",
-    name: "WanderFree",
+    name: "WanderFreely",
     tagline: "Every card perk, tracked.",
     category: "Credit-card benefits · mobile app",
     timeframe: "2026",
@@ -120,7 +125,7 @@ export const projects: Project[] = [
     summary:
       "A mobile app that organizes credit-card benefits: add the cards you hold and it surfaces every perk attached to them — statement credits, multipliers, lounge access, insurance — and tracks redemptions against each benefit's cycle.",
     overview: [
-      "Premium cards bury real money in perks people forget to use. WanderFree fixes that: you add the cards you hold, and it surfaces every benefit attached to them — statement credits, spend multipliers, lounge access, insurance — then tracks what you've redeemed against each benefit's renewal cycle.",
+      "Premium cards bury real money in perks people forget to use. WanderFreely fixes that: you add the cards you hold, and it surfaces every benefit attached to them — statement credits, spend multipliers, lounge access, insurance — then tracks what you've redeemed against each benefit's renewal cycle.",
       "The architecture is deliberately backend-less. The Expo/React Native app talks to Supabase Postgres directly, and Row-Level Security does all per-user filtering — a shareable \"portfolio\" is the unit of ownership, so a couple can pool their wallet without exposing it to anyone else.",
     ],
     highlights: [
@@ -143,6 +148,11 @@ export const projects: Project[] = [
     ],
     links: [
       {
+        label: "Visit site",
+        href: "https://wanderfreely.app",
+        external: true,
+      },
+      {
         label: "GitHub",
         href: "https://github.com/markharrybuildz/WanderFree",
         external: true,
@@ -151,7 +161,7 @@ export const projects: Project[] = [
     accent: "#F59E0B",
     hero: {
       src: "/projects/wanderfree/mark.png",
-      alt: "WanderFree logo mark — a paper plane forming a W",
+      alt: "WanderFreely logo mark — a paper plane forming a W",
     },
     galleryLabel: "Screens",
     galleryPortrait: true,
@@ -161,11 +171,11 @@ export const projects: Project[] = [
     gallery: [
       {
         src: "/projects/wanderfree/shot-home.png",
-        alt: "WanderFree home — your cards, a signup-bonus tracker (Chase Sapphire Reserve, $283 of $6,000 spent), and credits expiring soon",
+        alt: "WanderFreely home — your cards, a signup-bonus tracker (Chase Sapphire Reserve, $283 of $6,000 spent), and credits expiring soon",
       },
       {
         src: "/projects/wanderfree/shot-benefits.png",
-        alt: "WanderFree benefits — '$1,613 left to redeem', filterable by category, with each credit's monthly value and reset date",
+        alt: "WanderFreely benefits — '$1,613 left to redeem', filterable by category, with each credit's monthly value and reset date",
       },
     ],
     screenshotsPending: false,
