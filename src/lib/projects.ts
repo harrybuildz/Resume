@@ -171,11 +171,19 @@ export const projects: Project[] = [
     gallery: [
       {
         src: "/projects/wanderfree/shot-home.png",
-        alt: "WanderFreely home — your cards, a signup-bonus tracker (Chase Sapphire Reserve, $283 of $6,000 spent), and credits expiring soon",
+        alt: "WanderFreely home — signup-bonus trackers (Chase Sapphire Reserve, $0 of $6,000 spent by Sep 4; Amex Platinum, $0 of $12,000 by Dec 4) and credits expiring soon",
       },
       {
         src: "/projects/wanderfree/shot-benefits.png",
-        alt: "WanderFreely benefits — '$1,613 left to redeem', filterable by category, with each credit's monthly value and reset date",
+        alt: "WanderFreely benefits — '$3,570 left to redeem', filterable by category, with each credit's monthly value and reset date",
+      },
+      {
+        src: "/projects/wanderfree/shot-cards.png",
+        alt: "WanderFreely cards — searching a catalog of 128 cards to add (Chase Sapphire Reserve, Delta SkyMiles Reserve, U.S. Bank Altitude Reserve), with a running annual-fees total",
+      },
+      {
+        src: "/projects/wanderfree/shot-points.png",
+        alt: "WanderFreely points — rewards balances across programs (Chase Ultimate Rewards 150,000 pts, Bilt 50,000, Amex Membership Rewards 25,000) with pending points flagged",
       },
     ],
     screenshotsPending: false,
